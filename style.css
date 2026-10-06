@@ -1,0 +1,26 @@
+body {
+    background-color: #F5F2B8;
+}
+header {
+    background-color: #4D9DE0;
+}
+h1{
+    color: #F5F2B8;
+    font-size: xx-large;
+    /* I took the following 7 lines from fonts.google.com */
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+    /*text-shadow: 
+    -2px -2px 0 white,  
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white;*/
+}
+
+
+
