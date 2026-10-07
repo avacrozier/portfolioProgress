@@ -26,7 +26,7 @@ nav ul{
     gap: 30px;
     font-size: 40px;
     font-weight: 40px;
-    background-color:#4D9DE0;
+    background-color:#A8D0F0;
     border-radius: 10px;
     padding: 40px 40px;
     text-align: center;
@@ -35,7 +35,7 @@ a:hover{
     color: #F5F2B8;
 }
 .navList{
-    color: #F5F2B8;
+    color: #4D9DE0;
     text-decoration:none;
 }
 nav {
@@ -101,9 +101,31 @@ p{
     font-family: 'Times New Roman', Times, serif;
     margin-left:10px;
 }
-article h3{
-    color: #DF2201;
-    font-size: 25px;
+h3{
+    color: #F5F2B8;
+    font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
     margin-left:10px;
+}
+article{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background-color: #A8D0F0;
+    border-radius: 10px;
+    padding: 10px;
+}
+article h3 {
+    width: 100%;
+    margin: 0;
+}
+.description{
+    color:#DF2201;
+    flex: 1;
+}
+.footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
+    text-align: center;
 }
