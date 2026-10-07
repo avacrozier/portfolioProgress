@@ -1,0 +1,173 @@
+:root{
+    --myRed: #DF2201;
+    --myYellow: #F5F2B8;
+    --myBlue:#4D9DE0;
+    --myLightBlue:#CBE4F6;
+    --bodyFont: 'Times New Roman', Times, serif;
+    --headerFont: "Fraunces", serif;
+}
+body {
+    background-color: var(--myYellow);
+}
+header {
+    background-color: var(--myYellow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid var(--myRed);
+    border-radius: 10px;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+}
+.titles h1,
+.titles h2,
+nav ul{
+    margin: 0;
+    margin-left:30px;
+}
+nav ul{
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 40px;
+    font-weight: 40;
+    background-color: var(--myLightBlue);
+    border-radius: 10px;
+    padding: 40px 40px;
+    text-align: center;
+}
+a:hover{
+    color: var(--myYellow);
+}
+.navList{
+    color: var(--myBlue);
+    text-decoration:none;
+    font-size:xx-large;
+}
+nav {
+    margin-left: auto;
+    margin-right:auto;
+}
+#name{
+    color: var(--myRed);
+    font-size: 70px;
+    /* I took the following 7 lines from fonts.google.com */
+    font-family: var(--headerFont);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+#welcome{
+    color: var(--myBlue);
+    font-size: 40px;
+    font-family: var(--bodyFont);
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+.personalLogo{
+    font-family: "Monoton", sans-serif;
+    font-weight: 30;
+    font-style: normal;
+    margin-left:auto;
+    margin-right: auto;
+    color: var(--myRed);
+    font-size: 100px;
+}
+.navigation{
+    font-size: xx-large;
+    font-family: var(--bodyFont);
+    font-weight: 150;
+}
+.headshot {
+    width: 300px;
+    height: 300px;
+    border-radius:10px;
+    display: block;
+    margin: 0 auto;
+}
+.section{
+    color: var(--myYellow);
+    background-color:var(--myBlue);
+    border-radius:10px;
+    font-size: 40px;
+    font-family: var(--bodyFont);
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-indent:10px;
+}
+#about{
+    padding-left:10px;
+}
+p{
+    color: var(--myRed);
+    font-size: 25px;
+    font-family: var(--bodyFont);
+}
+h3{
+    color: var(--myYellow);
+    font-size: 35px;
+    font-family: var(--bodyFont);
+    margin-left:10px;
+    text-decoration:none;
+}
+article{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background-color: var(--myLightBlue);
+    border-radius: 10px;
+    padding: 10px;
+}
+article h3 {
+    width: 100%;
+    margin: 0;
+}
+.description{
+    color:var(--myBlue);
+    flex: 1;
+}
+.footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
+    text-align: center;
+}
+li{
+    color: var(--myBlue);
+    font-size: 25px;
+    font-family: var(--bodyFont);
+    margin-left:10px;
+}
+.logo{
+    width: 300px;
+    height: auto;
+}
+h3 a{
+    color: var(--myBlue);
+    text-decoration: none;
+}
+h3 a:hover{
+    color: var(--myRed);
+}
+#contactInformation{
+    font-family:var(--bodyFont);
+    color: var(--myRed);
+    background-color:var(--myLightBlue);
+    border-radius:10px;
+    font-style: normal;
+}
+#contactInformation a{
+    color: var(--myRed);
+    text-decoration:none;
+}
+#contactInformation a:hover{
+    color: var(--myYellow);
+}

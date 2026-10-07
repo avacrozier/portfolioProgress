@@ -9,55 +9,65 @@
     <meta name="year" content="2026">
     <meta name="article1" content="Coffeeshop Concerts">
     <meta name="article2" content="Spartan Music Business Club">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="#"><img src="Images/Ava Headshot.jpeg" alt="Here's a picture of me" width = 300></a>
-        <h1>Ava Crozier</h1>
-        <h2>Welcome to my portfolio.</h2>
+        <a href="#"><img class="headshot" src="Images/ava-headshot.jpeg" alt="Here's a picture of me"></a>
+        <div class="titles">
+            <h1 id="name">Ava Crozier</h1>
+            <h2 id="welcome">Welcome to my portfolio.</h2>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
+            <ul class="navigation">
+                <li><a class="navList" href="#About">About</a></li>
+                <li><a class="navList" href="#Projects">Projects</a></li>
+                <li><a class="navList" href="#Contact">Contact</a></li>
             </ul>
         </nav>
+        <h1 class="personalLogo">AC</h1>
     </header>
     <main>
         <section id="About">
-            <h2>About</h2>
-            <p>Hi, I'm Ava. I'm currently a sophomore at Michigan State University pursuing dual degrees in Business Management and Information Science. <br><br> I'm passionate about live music, connecting fan communities, and supporting artists through strong leadership.</p>
+            <h2 class="section">About</h2>
+            <p id="about">Hi, I'm Ava. I'm currently a sophomore at Michigan State University pursuing dual degrees in Business Management and Information Science. <br><br> I'm passionate about live music, connecting fan communities, and supporting artists through strong leadership.</p>
         </section>
         <section id="Projects">
-            <h2>Projects</h2>
+            <h2 class="section">Projects</h2>
             <article>
-                <h3><em>Coffeeshop Concerts</em></h3>
-                <img src="Images/CC Logo.png" alt="" width = 150>
-                <p>In the Spring of 2023, I started a foundation called Coffeeshop Concerts. We run a concert series hosted in local cafes with goals of:</p>
-                <ul> 
+                <h3><a href="https://www.instagram.com/coffeeshopconcerts/?hl=en" target="blank">Coffeeshop Concerts</a></h3>
+                <img class="logo" src="Images/cc-logo.png" alt="">
+                <p class="description">In the Spring of 2023, I started a foundation called Coffeeshop Concerts. We run a concert series hosted in local cafes with goals of:</p>
+                <ul class="description"> 
                     <li>Providing performance experience for aspiring musicians</li>
                     <li>Bringing live music into my community</li>
                     <li>Giving back to youth music programs through fundraising</li>
                 </ul>
-                <p>To date, we have hosted over 40 concerts and raised nearly $4,000.</p>
-                <a href="https://www.instagram.com/coffeeshopconcerts/" target="_blank"><img src="Images/IG logo.png" alt="" width = 50></a>
+                <p class="description">To date, we have hosted over 40 concerts and raised nearly $4,000.</p>
             </article>
+            <br>
             <article>
-                <h3><em>Spartan Music Business Club</em></h3>
-                <img src="Images/SMBC Logo.png" alt="" width = 150>
-                <p>This fall, we have officially launched the Spartan Music Business Club. <br><br> We target professional development through a guest speaker series with industry professionals and hands-on experience through concert production and live music booking.</p>
-                <a href="https://www.instagram.com/msusmbc/" target="_blank"><img src="Images/IG logo.png" alt="" width = 50></a>
+                <h3><a href="https://www.instagram.com/msusmbc/" target="blank">Spartan Music Business Club</a></h3>
+                <img class="logo" src="Images/smbc-logo.png" alt="">
+                <p class="description">This fall, we have officially launched the Spartan Music Business Club. <br><br> We target professional development through a guest speaker series with industry professionals and hands-on experience through concert production and live music booking.</p>
             </article>
         </section>
         <section id="Contact">
-            <h2>Contact</h2>
+            <h2 class="section">Contact</h2>
             <address>
-                <p>Ava Crozier<br><a href="mailto:Crozier5@msu.edu">Crozier5@msu.edu</a><br><a href="tel:+19492893281">(949) 289-3281</a><br>East Lansing, MI</p>
+                <p id="contactInformation">Ava Crozier<br><a href="mailto:Crozier5@msu.edu">Crozier5@msu.edu</a><br><a href="tel:+19492893281">(949) 289-3281</a><br>East Lansing, MI</p>
             </address>
         </section>
     </main>
     <footer>
-        <p></p>
+        <p class="footer">2026 Ava Crozier</p>
+        <br>
     </footer>
 </body>
 </html>
