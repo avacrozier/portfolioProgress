@@ -1,12 +1,20 @@
+:root{
+    --myRed: #DF2201;
+    --myYellow: #F5F2B8;
+    --myBlue:#4D9DE0;
+    --myLightBlue:#CBE4F6;
+    --bodyFont: 'Times New Roman', Times, serif;
+    --headerFont: "Fraunces", serif;
+}
 body {
-    background-color: #F5F2B8;
+    background-color: var(--myYellow);
 }
 header {
-    background-color: #F5F2B8;
+    background-color: var(--myYellow);
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 2px solid #DF2201;
+    border: 2px solid var(--myRed);
     border-radius: 10px;
 }
 .titles{
@@ -25,28 +33,29 @@ nav ul{
     flex-direction: column;
     gap: 30px;
     font-size: 40px;
-    font-weight: 40px;
-    background-color:#A8D0F0;
+    font-weight: 40;
+    background-color: var(--myLightBlue);
     border-radius: 10px;
     padding: 40px 40px;
     text-align: center;
 }
 a:hover{
-    color: #F5F2B8;
+    color: var(--myYellow);
 }
 .navList{
-    color: #4D9DE0;
+    color: var(--myBlue);
     text-decoration:none;
+    font-size:xx-large;
 }
 nav {
     margin-left: auto;
     margin-right:auto;
 }
 #name{
-    color: #DF2201;
+    color: var(--myRed);
     font-size: 70px;
     /* I took the following 7 lines from fonts.google.com */
-    font-family: "Fraunces", serif;
+    font-family: var(--headerFont);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -55,26 +64,25 @@ nav {
     "WONK" 0;
 }
 #welcome{
-    color: #4D9DE0;
+    color: var(--myBlue);
     font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--bodyFont);
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
 }
 .personalLogo{
     font-family: "Monoton", sans-serif;
-    font-weight: 30px;
+    font-weight: 30;
     font-style: normal;
     margin-left:auto;
     margin-right: auto;
-    color: #DF2201;
+    color: var(--myRed);
     font-size: 100px;
 }
-#navigation{
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
-    color: #588157;
+.navigation{
+    font-size: xx-large;
+    font-family: var(--bodyFont);
     font-weight: 150;
 }
 .headshot {
@@ -85,34 +93,37 @@ nav {
     margin: 0 auto;
 }
 .section{
-    color: #F5F2B8;
-    background-color:#4D9DE0;
+    color: var(--myYellow);
+    background-color:var(--myBlue);
     border-radius:10px;
     font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--bodyFont);
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
     text-indent:10px;
 }
+#about{
+    padding-left:10px;
+}
 p{
-    color: #DF2201;
+    color: var(--myRed);
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left:10px;
+    font-family: var(--bodyFont);
 }
 h3{
-    color: #F5F2B8;
+    color: var(--myYellow);
     font-size: 35px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--bodyFont);
     margin-left:10px;
+    text-decoration:none;
 }
 article{
     display: flex;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-    background-color: #A8D0F0;
+    background-color: var(--myLightBlue);
     border-radius: 10px;
     padding: 10px;
 }
@@ -121,11 +132,42 @@ article h3 {
     margin: 0;
 }
 .description{
-    color:#DF2201;
+    color:var(--myBlue);
     flex: 1;
 }
 .footer{
     font-family: 'Times New Roman', Times, serif;
     font-size:small;
     text-align: center;
+}
+li{
+    color: var(--myBlue);
+    font-size: 25px;
+    font-family: var(--bodyFont);
+    margin-left:10px;
+}
+.logo{
+    width: 300px;
+    height: auto;
+}
+h3 a{
+    color: var(--myBlue);
+    text-decoration: none;
+}
+h3 a:hover{
+    color: var(--myRed);
+}
+#contactInformation{
+    font-family:var(--bodyFont);
+    color: var(--myRed);
+    background-color:var(--myLightBlue);
+    border-radius:10px;
+    font-style: normal;
+}
+#contactInformation a{
+    color: var(--myRed);
+    text-decoration:none;
+}
+#contactInformation a:hover{
+    color: var(--myYellow);
 }
