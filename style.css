@@ -101,4 +101,9 @@ p{
     font-family: 'Times New Roman', Times, serif;
     margin-left:10px;
 }
-article h
+article h3{
+    color: #DF2201;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:10px;
+}
