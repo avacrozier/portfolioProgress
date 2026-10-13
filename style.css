@@ -112,11 +112,14 @@ p{
     font-family: var(--bodyFont);
 }
 h3{
-    color: var(--myYellow);
+    color: var(--myRed);
     font-size: 35px;
     font-family: var(--bodyFont);
     margin-left:10px;
     text-decoration:none;
+}
+#Projects article + article{
+    margin-top: 16px;
 }
 article{
     display: flex;
@@ -151,11 +154,11 @@ li{
     height: auto;
 }
 h3 a{
-    color: var(--myBlue);
+    color: var(--myRed);
     text-decoration: none;
 }
 h3 a:hover{
-    color: var(--myRed);
+    color: var(--myYellow);
 }
 #contactInformation{
     font-family:var(--bodyFont);
