@@ -160,6 +160,9 @@ h3 a{
 h3 a:hover{
     color: var(--myYellow);
 }
+.caption{
+    font-size: 20px;
+}
 #contactInformation{
     font-family:var(--bodyFont);
     color: var(--myRed);
