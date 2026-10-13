@@ -1,7 +1,7 @@
 :root{
     --myRed: #DF2201;
     --myYellow: #F5F2B8;
-    --myBlue:#4D9DE0;
+    --myBlue:#2278BF;
     --myLightBlue:#CBE4F6;
     --bodyFont: 'Times New Roman', Times, serif;
     --headerFont: "Fraunces", serif;
@@ -16,6 +16,8 @@ header {
     gap: 20px;
     border: 2px solid var(--myRed);
     border-radius: 10px;
+    margin: 15px 15px 15px;
+    padding: 0;
 }
 .titles{
     display: flex;
@@ -40,7 +42,7 @@ nav ul{
     text-align: center;
 }
 a:hover{
-    color: var(--myYellow);
+    color: var(--myRed);
 }
 .navList{
     color: var(--myBlue);
@@ -88,9 +90,9 @@ nav {
 .headshot {
     width: 300px;
     height: 300px;
-    border-radius:10px;
+    border-radius:8px 0 0 8px;
     display: block;
-    margin: 0 auto;
+    margin: 0;
 }
 .section{
     color: var(--myYellow);
@@ -101,12 +103,25 @@ nav {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    text-indent:10px;
+    margin: 15px 15px 15px;
+    padding: 0 25px;
+}
+#About,
+#Projects,
+#Affiliations,
+#Contact{
+    text-align: left;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
 }
 #about{
-    padding-left:10px;
+    padding: 0 40px;
 }
-p{
+p {
     color: var(--myRed);
     font-size: 25px;
     font-family: var(--bodyFont);
@@ -115,11 +130,10 @@ h3{
     color: var(--myRed);
     font-size: 35px;
     font-family: var(--bodyFont);
-    margin-left:10px;
     text-decoration:none;
 }
 #Projects article + article{
-    margin-top: 16px;
+    margin-top: 15px;
 }
 article{
     display: flex;
@@ -128,7 +142,9 @@ article{
     flex-wrap: wrap;
     background-color: var(--myLightBlue);
     border-radius: 10px;
-    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px 25px;
 }
 article h3 {
     width: 100%;
@@ -149,6 +165,14 @@ li{
     font-family: var(--bodyFont);
     margin-left:10px;
 }
+#Affiliations ul{
+    margin: 0;
+    padding: 0 40px;
+}
+#Affiliations li{
+    margin-left: 0;
+    padding: 0 40px;
+}
 .logo{
     width: 300px;
     height: auto;
@@ -158,7 +182,7 @@ h3 a{
     text-decoration: none;
 }
 h3 a:hover{
-    color: var(--myYellow);
+    color: var(--myBlue);
 }
 .caption{
     font-size: 20px;
@@ -169,6 +193,11 @@ h3 a:hover{
     background-color:var(--myLightBlue);
     border-radius:10px;
     font-style: normal;
+    margin: 15px 15px 15px;
+    padding: 10px 25px;
+}
+#Contact address{
+    margin: 0;
 }
 #contactInformation a{
     color: var(--myRed);
@@ -177,8 +206,30 @@ h3 a:hover{
 #contactInformation a:hover{
     color: var(--myYellow);
 }
-.example{
-    width: 250px;
-    aspect-ratio: 4/3;
+/* I used cssgridgenerator.io for the grid formatting */
+.gallery {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+.photo-card {
+    flex: 1 1 0;
+    min-width: 0;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+.photo-card img{
+    width: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    border: 2px solid var(--myBlue);
+}
+.photo-card p{
+    margin-top: 12px;
+    font-size: 25px;
+    text-align: center;
 }
