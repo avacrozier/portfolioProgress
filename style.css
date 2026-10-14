@@ -7,7 +7,7 @@
     --headerFont: "Fraunces", serif;
 }
 body {
-    background-color: var(--myYellow);
+    background-color: var(--myYellow);make 
 }
 header {
     background-color: var(--myYellow);
@@ -423,5 +423,61 @@ h3 a:hover{
     }
     .titles {
         min-width: auto;
+    }
+}
+@media (max-width: 700px) {
+    header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+    header > a {
+        grid-row: 1;
+        justify-self: center;
+        width: min(100%, 220px);
+    }
+    .titles {
+        display: contents;
+    }
+    #name {
+        grid-row: 2;
+        margin: 0;
+        text-align: center;
+        font-size: clamp(28px, 8vw, 40px);
+    }
+    #welcome {
+        grid-row: 3;
+        margin: 0;
+        text-align: center;
+        font-size: clamp(16px, 4vw, 22px);
+    }
+    nav {
+        grid-row: 4;
+        justify-self: stretch;
+        margin: 0;
+    }
+    nav ul {
+        width: fit-content;
+        margin: 0 auto;
+        gap: 10px;
+        padding: 12px 20px;
+        border-radius: 10px;
+    }
+    .navList {
+        font-size: 18px;
+    }
+    nav li {
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .headshot {
+        border-radius: 8px;
+    }
+    .personalLogo {
+        grid-row: 5;
+        justify-self: center;
+        margin: 0;
+        font-size: clamp(36px, 10vw, 56px);
     }
 }

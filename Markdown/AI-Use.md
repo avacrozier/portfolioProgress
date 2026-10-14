@@ -99,3 +99,7 @@ When beginning to implement different browser size accessibility, I noticed that
 While applying a grid to my affiliations, I was bothered by inconsistent spacing and centering.
     **Prompt:** Please remove the extra space below affiliations and add 5px of padding between the text and the edge of the background for each li. Also, please vertically center each li within its background. Keep the grid formatting, do not use flexbox
     **Response:** Updated style.css: the Affiliations layout now has two grid rows instead of five, removing the unused space below it. Each affiliation item has 5px padding and centers its text vertically using CSS Grid. No flexbox was added.
+
+When testing the preview on mobile, the smaller header was difficult to see. I had Copilot move the columns as the browser gets smaller in the same way as the photo cards.
+    **Prompt:** Instead of shrinking the view on mobile, make it so the header switches from 4 columns to 1. order (top to bottom): headshot, name, welcome, nav, logo. match current formatting to keep nice aesthetics and rounded corners
+    **Resoponse:** The header currently stays in a single flex row, so its four sections compress on narrow screens. I’ll add a mobile-only one-column grid and flatten the title wrapper there so the name and welcome message can occupy separate rows in the requested order.
