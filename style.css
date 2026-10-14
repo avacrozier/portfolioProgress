@@ -13,32 +13,45 @@ header {
     background-color: var(--myYellow);
     display: flex;
     align-items: center;
-    gap: 20px;
+    flex-wrap: nowrap;
+    min-width: 0;
+    gap: 1.25vw;
     border: 2px solid var(--myRed);
     border-radius: 10px;
     margin: 15px 15px 15px;
-    padding: 0;
+    /* I used Copilot to shift my logo left so it wasn't right up against the border*/
+    padding: 0 15px 0 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+header > a {
+    flex: 0 1 18.75vw;
+    min-width: 0;
 }
 .titles{
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 .titles h1,
 .titles h2,
 nav ul{
     margin: 0;
-    margin-left:30px;
+    margin-left:1.875vw;
 }
 nav ul{
     list-style: none;
     display:flex;
     flex-direction: column;
-    gap: 30px;
-    font-size: 40px;
+    gap: 1.875vw;
+    font-size: 1.5625vw;
     font-weight: 40;
     background-color: var(--myLightBlue);
-    border-radius: 10px;
-    padding: 40px 40px;
+    border-radius: 0.625vw;
+    padding: 2.5vw;
     text-align: center;
 }
 a:hover{
@@ -47,15 +60,17 @@ a:hover{
 .navList{
     color: var(--myBlue);
     text-decoration:none;
-    font-size:xx-large;
+    font-size:1.875vw;
 }
 nav {
     margin-left: auto;
     margin-right:auto;
+    flex: 0 1 auto;
+    min-width: 0;
 }
 #name{
     color: var(--myRed);
-    font-size: 70px;
+    font-size: 4.375vw;
     /* I took the following 7 lines from fonts.google.com */
     font-family: var(--headerFont);
     font-optical-sizing: auto;
@@ -67,7 +82,7 @@ nav {
 }
 #welcome{
     color: var(--myBlue);
-    font-size: 40px;
+    font-size: 2.5vw;
     font-family: var(--bodyFont);
     font-optical-sizing: auto;
     font-weight: 200;
@@ -77,10 +92,13 @@ nav {
     font-family: "Monoton", sans-serif;
     font-weight: 30;
     font-style: normal;
-    margin-left:auto;
-    margin-right: auto;
+    margin-left: 1.875vw;
+    margin-right: 1.875vw;
     color: var(--myRed);
-    font-size: 100px;
+    font-size: 6.25vw;
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
 }
 .navigation{
     font-size: xx-large;
@@ -88,9 +106,11 @@ nav {
     font-weight: 150;
 }
 .headshot {
-    width: 300px;
-    height: 300px;
-    border-radius:8px 0 0 8px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.5vw 0 0 0.5vw;
     display: block;
     margin: 0;
 }
@@ -153,6 +173,7 @@ article h3 {
 .description{
     color:var(--myBlue);
     flex: 1;
+    font-size: 30px;
 }
 .footer{
     font-family: 'Times New Roman', Times, serif;
@@ -165,17 +186,48 @@ li{
     font-family: var(--bodyFont);
     margin-left:10px;
 }
+nav li {
+    font-size: 1.5625vw;
+    margin-left: 0.625vw;
+}
 #Affiliations ul{
     margin: 0;
-    padding: 0 40px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 8px;
 }
 #Affiliations li{
-    margin-left: 0;
-    padding: 0 40px;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    width: auto;
+    text-align: center;
+    /* I used gemini to remove the bullet points*/
+    list-style-type: none;
+    background-color: #CBE4F6;
+    border-radius: 10px;
 }
-.logo{
-    width: 300px;
-    height: auto;
+#a1 {
+    grid-column: span 4 / span 4;
+}
+#a2{
+    grid-column: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+#a3 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+#a4{
+    grid-column: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 2;
 }
 h3 a{
     color: var(--myRed);
@@ -206,15 +258,16 @@ h3 a:hover{
 #contactInformation a:hover{
     color: var(--myYellow);
 }
-/* I used cssgridgenerator.io for the grid formatting */
 .gallery {
     display: flex;
+    flex-direction: column;
     gap: 15px;
     width: 100%;
 }
 .photo-card {
     flex: 1 1 0;
     min-width: 0;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0;
@@ -232,4 +285,143 @@ h3 a:hover{
     margin-top: 12px;
     font-size: 25px;
     text-align: center;
+}
+.gallery2{
+    display: flex;
+    flex-direction: column;
+}
+.gallery2 img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    border: 2px solid var(--myBlue);  
+}
+.gallery2 p{
+    padding-right: 15px;
+}
+#borderexception {
+    border-color: transparent;
+}
+@media (min-width: 333px) {
+    header {
+        gap: max(1.25vw, 4px);
+    }
+    header > a {
+        flex-basis: max(18.75vw, 64px);
+    }
+    #name {
+        font-size: max(4.375vw, 16px);
+    }
+    #welcome {
+        font-size: max(2.5vw, 10px);
+    }
+    nav ul {
+        gap: max(1.875vw, 6px);
+        padding: max(2.5vw, 8px);
+        border-radius: max(0.625vw, 2px);
+    }
+    .navList {
+        font-size: max(1.875vw, 9px);
+    }
+    nav li {
+        font-size: max(1.5625vw, 8px);
+        margin-left: max(0.625vw, 2px);
+    }
+    .personalLogo {
+        margin-left: max(1.875vw, 6px);
+        margin-right: max(1.875vw, 6px);
+        font-size: max(6.25vw, 22px);
+    }
+}
+@media (min-width: 666px) {
+    header > a {
+        flex-basis: clamp(125px, 18.75vw, 300px);
+    }
+    #name {
+        font-size: clamp(29px, 4.375vw, 70px);
+    }
+    #welcome {
+        font-size: clamp(17px, 2.5vw, 40px);
+    }
+    nav ul {
+        gap: clamp(12px, 1.875vw, 30px);
+        padding: clamp(16px, 2.5vw, 40px);
+        border-radius: clamp(4px, 0.625vw, 10px);
+    }
+    .navList {
+        font-size: clamp(12px, 1.875vw, 30px);
+    }
+    nav li {
+        font-size: clamp(10px, 1.5625vw, 25px);
+        margin-left: clamp(4px, 0.625vw, 10px);
+    }
+    .personalLogo {
+        margin-left: clamp(12px, 1.875vw, 30px);
+        margin-right: clamp(12px, 1.875vw, 30px);
+        font-size: clamp(42px, 6.25vw, 100px);
+    }
+}
+@media (min-width: 701px) {
+    .gallery,
+    .gallery2 {
+        flex-direction: row;
+    }
+    .photo-card {
+        width: auto;
+    }
+    .gallery2 img {
+        width: 33%;
+    }
+}
+@media (min-width: 1601px) {
+    header {
+        gap: 20px;
+    }
+    header > a {
+        flex-basis: 300px;
+    }
+    .headshot {
+        height: 300px;
+        border-radius: 8px 0 0 8px;
+    }
+    .titles h1,
+    .titles h2,
+    nav ul {
+        margin-left: 30px;
+    }
+    #name {
+        font-size: 70px;
+    }
+    #welcome {
+        font-size: 40px;
+    }
+    nav ul {
+        gap: 30px;
+        padding: 40px;
+        border-radius: 10px;
+    }
+    .navList {
+        font-size: xx-large;
+    }
+    nav li {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    nav ul {
+        font-size: 40px;
+    }
+    .personalLogo {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 100px;
+    }
+    nav {
+        min-width: auto;
+    }
+    .titles {
+        min-width: auto;
+    }
 }
