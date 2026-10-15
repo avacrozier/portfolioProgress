@@ -103,3 +103,17 @@ While applying a grid to my affiliations, I was bothered by inconsistent spacing
 When testing the preview on mobile, the smaller header was difficult to see. I had Copilot move the columns as the browser gets smaller in the same way as the photo cards.
     **Prompt:** Instead of shrinking the view on mobile, make it so the header switches from 4 columns to 1. order (top to bottom): headshot, name, welcome, nav, logo. match current formatting to keep nice aesthetics and rounded corners
     **Resoponse:** The header currently stays in a single flex row, so its four sections compress on narrow screens. I’ll add a mobile-only one-column grid and flatten the title wrapper there so the name and welcome message can occupy separate rows in the requested order.
+
+**10/15/26**
+
+While formatting, I ran into an issue, so I used Copilot to troubleshoot.
+    **Prompt:** Why is my Affiliations ul indented to the left? My code looks consistent for left and right alignment but visually there's more of a left margin
+    **Response:**The extra inset comes from the browser’s default padding on <ul>, not from a left/right mismatch in your CSS. In style.css, you set margin-left and margin-right to 50px, but don’t reset the list’s padding. Browsers typically add about 40px of left padding to a <ul>, so the grid starts roughly 40px farther in from the left than from the right. Keep the margins and remove that default padding:
+        #Affiliations ul {    
+            margin-left: 50px;    
+            margin-right: 50px;    
+            padding-inline: 0;    
+            display: grid;    
+            /* ... */
+        }
+    list-style-type: none on the <li>s removes the bullets, but it doesn’t remove the <ul>’s padding            

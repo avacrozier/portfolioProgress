@@ -7,7 +7,8 @@
     --headerFont: "Fraunces", serif;
 }
 body {
-    background-color: var(--myYellow);make 
+    background-color: var(--myYellow);
+    padding-top: 15px;
 }
 header {
     background-color: var(--myYellow);
@@ -18,7 +19,7 @@ header {
     gap: 1.25vw;
     border: 2px solid var(--myRed);
     border-radius: 10px;
-    margin: 15px 15px 15px;
+    margin: 15px 50px 15px 50px;
     /* I used Copilot to shift my logo left so it wasn't right up against the border*/
     padding: 0 15px 0 0;
 }
@@ -123,7 +124,7 @@ nav {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    margin: 15px 15px 15px;
+    margin: 15px 50px 15px 50px;
     padding: 0 25px;
 }
 #About,
@@ -140,6 +141,7 @@ main{
 }
 #about{
     padding: 0 40px;
+    margin:15px 40px;
 }
 p {
     color: var(--myRed);
@@ -162,9 +164,9 @@ article{
     flex-wrap: wrap;
     background-color: var(--myLightBlue);
     border-radius: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 15px 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
 }
 article h3 {
     width: 100%;
@@ -191,8 +193,9 @@ nav li {
     margin-left: 0.625vw;
 }
 #Affiliations ul{
-    margin: 0;
-    padding: 0 15px;
+    margin-left: 45px;
+    margin-right: 50px;
+    padding-inline: 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -202,8 +205,6 @@ nav li {
     display: grid;
     place-items: center;
     box-sizing: border-box;
-    margin: 0;
-    padding: 5px;
     width: auto;
     text-align: center;
     /* I used gemini to remove the bullet points*/
@@ -245,7 +246,7 @@ h3 a:hover{
     background-color:var(--myLightBlue);
     border-radius:10px;
     font-style: normal;
-    margin: 15px 15px 15px;
+    margin: 15px 50px 15px 50px;
     padding: 10px 25px;
 }
 #Contact address{
