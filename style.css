@@ -1,8 +1,8 @@
 :root{
     --myRed: #DF2201;
-    --myYellow: #F5F2B8;
-    --myBlue:#1C87DF;
-    --myLightBlue:#CBE4F6;
+    --myYellow: #FFF7B6;
+    --myBlue:#0073BA;
+    --myLightBlue:#D5E3E9;
     --bodyFont: 'Times New Roman', Times, serif;
     --headerFont: "Fraunces", serif;
 }
@@ -105,6 +105,7 @@ nav {
     font-size: xx-large;
     font-family: var(--bodyFont);
     font-weight: 150;
+    margin-right: 150px;
 }
 .headshot {
     width: 100%;
@@ -142,6 +143,7 @@ main{
 #about{
     padding: 0 40px;
     margin:15px 40px;
+    font-size: 30px;
 }
 p {
     color: var(--myRed);
