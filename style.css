@@ -305,6 +305,9 @@ h3 a:hover{
     border-color: transparent;
 }
 @media (min-width: 333px) {
+    :root{
+        --myBlue: #003D64;
+    }
     header {
         gap: max(1.25vw, 4px);
     }
@@ -336,6 +339,9 @@ h3 a:hover{
     }
 }
 @media (min-width: 666px) {
+    :root{
+        --myBlue: #003D64;
+    }
     header > a {
         flex-basis: clamp(125px, 18.75vw, 300px);
     }
@@ -364,6 +370,9 @@ h3 a:hover{
     }
 }
 @media (min-width: 701px) {
+    :root{
+        --myBlue: #0073BA;
+    }
     .gallery {
         flex-direction: row;
     }
