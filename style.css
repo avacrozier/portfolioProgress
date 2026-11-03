@@ -1,8 +1,8 @@
 :root{
-    --myRed: #FF2600;
-    --myYellow: #FFFCBA;
-    --myBlue:#0074D3;
-    --myLightBlue:#C3E5FF;
+    --myRed: #DF2201;
+    --myYellow: #F5F2B8;
+    --myBlue:#1C87DF;
+    --myLightBlue:#CBE4F6;
     --bodyFont: 'Times New Roman', Times, serif;
     --headerFont: "Fraunces", serif;
 }
@@ -204,7 +204,7 @@ nav li {
     text-align: center;
     /* I used gemini to remove the bullet points*/
     list-style-type: none;
-    background-color: #CBE4F6;
+    background-color: var(--myLightBlue);
     border-radius: 10px;
 }
 #a1 {
