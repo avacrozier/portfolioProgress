@@ -1,8 +1,8 @@
 :root{
-    --myRed: #DF2201;
-    --myYellow: #F5F2B8;
-    --myBlue:#2278BF;
-    --myLightBlue:#CBE4F6;
+    --myRed: #FF2600;
+    --myYellow: #FFFCBA;
+    --myBlue:#0074D3;
+    --myLightBlue:#C3E5FF;
     --bodyFont: 'Times New Roman', Times, serif;
     --headerFont: "Fraunces", serif;
 }
@@ -176,11 +176,6 @@ article h3 {
     color:var(--myBlue);
     flex: 1;
     font-size: 30px;
-}
-.footer{
-    font-family: 'Times New Roman', Times, serif;
-    font-size:small;
-    text-align: center;
 }
 li{
     color: var(--myBlue);
@@ -481,4 +476,10 @@ h3 a:hover{
         margin: 0;
         font-size: clamp(36px, 10vw, 56px);
     }
+}
+.footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:25px;
+    text-align: center;
+    font-weight:500;
 }
