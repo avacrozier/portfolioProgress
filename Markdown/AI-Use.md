@@ -117,3 +117,10 @@ While formatting, I ran into an issue, so I used Copilot to troubleshoot.
             /* ... */
         }
     list-style-type: none on the <li>s removes the bullets, but it doesn’t remove the <ul>’s padding            
+**11/3/26** 
+
+I noticed the images in my format2 cards were cut off when decreasing browser width, and used copilot to correct the issue.
+    **Prompt:** between different breakpoints, the images in the format2 style article cards are cut off when decreasing browser width. Instead of changing the image ratio, fix my media queries so the images maintain the ratio and stack like the images from format1 cards.
+    **Response**: Updated the media queries in style.css: format2 galleries now keep the image stacked below the description until the viewport reaches 1000px, then switch to a side-by-side layout. The existing 4:3 image ratio is unchanged. The stylesheet diff check passes, and your navigation margin change is preserved.
+    **Follow-up Prompt:** They should stack as soon as there is not enough space for the proper ratio. Do not let the ratio be modified at all when changing browser width.
+    **Follow-up Response:** Replaced format2’s fixed viewport breakpoint with an auto-fitting grid in style.css. The description and image now stack when the card cannot fit two 350px columns; otherwise, they sit side by side. The existing 4:3 image ratio is unchanged and the images are vertically centered beside the description. The stylesheet diff check passes.

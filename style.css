@@ -105,7 +105,6 @@ nav {
     font-size: xx-large;
     font-family: var(--bodyFont);
     font-weight: 150;
-    margin-right: 125px;
 }
 .headshot {
     width: 100%;
@@ -285,8 +284,10 @@ h3 a:hover{
     text-align: center;
 }
 .gallery2{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 15px;
+    align-items: center;
 }
 .gallery2 img{
     width: 100%;
@@ -363,15 +364,11 @@ h3 a:hover{
     }
 }
 @media (min-width: 701px) {
-    .gallery,
-    .gallery2 {
+    .gallery {
         flex-direction: row;
     }
     .photo-card {
         width: auto;
-    }
-    .gallery2 img {
-        width: 33%;
     }
 }
 @media (min-width: 1601px) {
@@ -418,6 +415,7 @@ h3 a:hover{
     }
     nav {
         min-width: auto;
+        margin-right: 125px;
     }
     .titles {
         min-width: auto;
