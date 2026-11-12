@@ -39,3 +39,12 @@
     width: auto;
     transform: translateX(-50%);
 }
+/* Asked Claude to change colors to match theme */
+.slickClass .slick-dots li button:before {
+    color: var(--myBlue);
+    opacity: 0.5;
+}
+.slickClass .slick-dots li.slick-active button:before {
+    color: var(--myRed);
+    opacity: 1;
+}

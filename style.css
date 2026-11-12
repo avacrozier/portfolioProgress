@@ -99,6 +99,7 @@ button{
     color: var(--myLightBlue);
     background-color: var(--myBlue);
     font-size:1.875vw;
+    font-weight: 650;
     border-radius: 0.625vw;
     font-family: var(--bodyFont);
     padding: 5px 10px;
