@@ -15,51 +15,96 @@ body {
     padding-top: 15px;
 }
 header {
+   /*Updated from Gemini's suggestions, see AI-Use.md*/
     background-color: var(--myYellow);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    text-align: center;
+    gap: 6px;               
+    border: 2px solid var(--myRed);
+    border-radius: 10px;
+    margin: 15px 16px;
+    padding: 16px 12px;
+    /*flex-wrap: nowrap;
     min-width: 0;
     gap: 1.25vw;
     border: 2px solid var(--myRed);
     border-radius: 10px;
-    margin: 15px 50px 15px 50px;
+    margin: 15px 50px 15px 50px;*/
     /* I used Copilot to shift my logo left so it wasn't right up against the border*/
-    padding: 0 15px 0 0;
+    /*padding: 0 15px 0 0;*/
 }
 img{
     max-width: 100%;
     display: block;
 }
 header > a {
-    flex: 0 1 18.75vw;
-    min-width: 0;
+    /*Updated from Gemini's suggestions, see AI-Use.md*/
+    display: block;
+    width: 180px;            
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    flex: none;
+    /*flex: 0 1 18.75vw;
+    min-width: 0;*/
 }
 .titles{
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto;
-    min-width: 0;
+    /*Updated from Gemini's suggestions, see AI-Use.md*/
+    align-items: center;
+    width: 100%;
+    /*flex: 1 1 auto;
+    min-width: 0;*/
 }
 .titles h1,
 .titles h2,
 nav ul{
     margin: 0;
-    margin-left:1.875vw;
+}
+.titles h1,
+.titles h2{
+    margin: 0; /*Updated from Gemini's suggestions, see AI-Use.md*/
+    /*margin-left:1.875vw;*/
 }
 nav ul{
+    /*Updated from Gemini's suggestions, see AI-Use.md*/
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+    background-color: var(--myLightBlue);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 5px auto;  
+    /*list-style: none;
     display:flex;
     flex-direction: column;
-    gap: 1.875vw;
+    gap: 1.25vw;
     font-size: 1.5625vw;
     font-weight: 40;
     background-color: var(--myLightBlue);
     border-radius: 0.625vw;
-    padding: 2.5vw;
+    padding: 1.5vw;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;*/
+}
+button{
+    color: var(--myLightBlue);
+    background-color: var(--myBlue);
+    font-size:1.875vw;
+    border-radius: 0.625vw;
+    font-family: var(--bodyFont);
+    padding: 5px 10px;
+}
+nav button{
+    text-align: center;
 }
 a:hover{
     color: var(--myRed);
@@ -70,33 +115,57 @@ a:hover{
     font-size:1.875vw;
 }
 nav {
-    margin-left: auto;
+    /*Updated from Gemini's suggestions, see AI-Use.md*/    
+    width: auto;            
+    display: flex;
+    justify-content: center; 
+    margin: 0 5px;
+    /*margin-left: auto;
     margin-right:auto;
     flex: 0 1 auto;
-    min-width: 0;
+    min-width: 0;*/
+}
+/*Updated from Gemini's suggestions, see AI-Use.md*/
+.navList,
+nav button {
+    font-size: 16px;
 }
 #name{
+    /*Updated from Gemini's suggestions, see AI-Use.md*/
     color: var(--myRed);
-    font-size: 4.375vw;
-    /* I took the following 7 lines from fonts.google.com */
+    font-size: 32px;
     font-family: var(--headerFont);
-    font-optical-sizing: auto;
     font-weight: 400;
+    line-height: 1.1;        
+    margin-bottom: 2px;
+    /* I took the following 7 lines from fonts.google.com 
+    font-family: var(--headerFont);
+    font-weight: 400;
+    font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "SOFT" 0,
-    "WONK" 0;
+    "WONK" 0;*/
 }
 #welcome{
+    /* Updated from Gemini's suggestions, see AI-Use.md*/
     color: var(--myBlue);
-    font-size: 2.5vw;
+    font-size: 20px;
+    /*font-size: 2.5vw;*/
     font-family: var(--bodyFont);
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+    /*font-optical-sizing: auto;*/
+    font-weight: 400;
+    /*font-style: normal;*/
 }
 .personalLogo{
+    /* Updated from Gemini's suggestions, see AI-Use.md*/
     font-family: "Monoton", sans-serif;
+    font-weight: 30;
+    color: var(--myRed);
+    font-size: 40px;
+    margin: 0;
+    white-space: nowrap;
+    /*font-family: "Monoton", sans-serif;
     font-weight: 30;
     font-style: normal;
     margin-left: 1.875vw;
@@ -105,7 +174,7 @@ nav {
     font-size: 6.25vw;
     flex: 0 1 auto;
     min-width: 0;
-    white-space: nowrap;
+    white-space: nowrap;*/
 }
 .navigation{
     font-size: xx-large;
@@ -113,13 +182,21 @@ nav {
     font-weight: 150;
 }
 .headshot {
+    /* Updated from Gemini's suggestions, see AI-Use.md*/ 
     width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;  
+    object-fit: cover;
+    border-radius: 10px;    
+    display: block;
+    margin: 0;
+    /*width: 100%;
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 0.5vw 0 0 0.5vw;
+    border-radius: 10px; 
     display: block;
-    margin: 0;
+    margin: 0;*/
 }
 .section{
     color: var(--myYellow);
@@ -130,8 +207,9 @@ nav {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    margin: 15px 50px 15px 50px;
-    padding: 0 25px;
+    /* Updated with Gemini's suggestions, see AI-Use.md */
+    margin: 15px 16px;
+    padding: 0 20px;
 }
 #About,
 #Projects,
@@ -146,8 +224,9 @@ main{
     margin-top: 15px;
 }
 #about{
-    padding: 0 40px;
-    margin:15px 40px;
+    /* Updated with suggestions from Gemini, see AI-Use.md*/
+    margin: 15px 16px;
+    padding: 0 16px;
     font-size: 30px;
 }
 p {
@@ -171,9 +250,10 @@ article{
     flex-wrap: wrap;
     background-color: var(--myLightBlue);
     border-radius: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 20px;
+    /* Updated with suggestions from Gemini, see AI-Use.md*/
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
 }
 article h3 {
     width: 100%;
@@ -191,12 +271,13 @@ li{
     margin-left:10px;
 }
 nav li {
-    font-size: 1.5625vw;
-    margin-left: 0.625vw;
+    display: flex;
+    align-items: center;     
+    margin-left: 0;
 }
 #Affiliations ul{
-    margin-left: 45px;
-    margin-right: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
     padding-inline: 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -248,8 +329,9 @@ h3 a:hover{
     background-color:var(--myLightBlue);
     border-radius:10px;
     font-style: normal;
-    margin: 15px 50px 15px 50px;
-    padding: 10px 25px;
+    /* Updated with suggestions from Gemini, see AI-Use.md*/
+    margin: 15px 16px;
+    padding: 10px 20px;
 }
 #Contact address{
     margin: 0;
@@ -292,11 +374,14 @@ h3 a:hover{
 .gallery2{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
-    gap: 15px;
+    column-gap: 15px;
+    row-gap: 20px;
     align-items: center;
+    justify-items: center;
+    width: 100%;
 }
 .gallery2 img{
-    width: 100%;
+    width: 70%;
     height: auto;
     display: block;
     object-fit: cover;
@@ -304,80 +389,150 @@ h3 a:hover{
     border-radius: 10px;
     border: 2px solid var(--myBlue);  
 }
-.gallery2 p{
-    padding-right: 15px;
-}
 #borderexception {
     border-color: transparent;
 }
-@media (min-width: 333px) {
-    :root{
-        --myBlue: #003D64;
+/* I used Gemini to create new Media Queries below*/
+@media (min-width: 320px) {
+    header {
+        margin: 15px 16px;
+        padding: 16px 12px;
+        gap: 6px;
+    }
+    header > a {
+        width: 210px;
+    }
+    #name {
+        font-size: 34px;
+    }
+    #welcome {
+        font-size: 20px;
+    }
+}
+@media (min-width: 480px) {
+    header,
+    .section,
+    #about,
+    #contactInformation {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    article,
+    #Affiliations ul {
+        margin-left: 24px;
+        margin-right: 24px;
     }
     header {
-        gap: max(1.25vw, 4px);
+        margin: 15px 24px;
+        padding: 20px 16px;
+        gap: 8px;            
     }
     header > a {
-        flex-basis: max(18.75vw, 64px);
+        width: 260px;
     }
     #name {
-        font-size: max(4.375vw, 16px);
+        font-size: 42px;
     }
     #welcome {
-        font-size: max(2.5vw, 10px);
+        font-size: 24px;
     }
-    nav ul {
-        gap: max(1.875vw, 6px);
-        padding: max(2.5vw, 8px);
-        border-radius: max(0.625vw, 2px);
-    }
-    .navList {
-        font-size: max(1.875vw, 9px);
-    }
-    nav li {
-        font-size: max(1.5625vw, 8px);
-        margin-left: max(0.625vw, 2px);
+    .navList,
+    nav button {
+        font-size: 18px;
     }
     .personalLogo {
-        margin-left: max(1.875vw, 6px);
-        margin-right: max(1.875vw, 6px);
-        font-size: max(6.25vw, 22px);
+        font-size: 52px;
     }
 }
-@media (min-width: 666px) {
-    :root{
-        --myBlue: #003D64;
+@media (min-width: 768px) {
+    header,
+    .section,
+    #about,
+    #contactInformation {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    article,
+    #Affiliations ul {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;       
+        text-align: left;
+        gap: clamp(10px, 1.5vw, 20px);
+        margin: 15px 30px;
+        padding: 0 18px 0 0;       
+        overflow: hidden;
     }
     header > a {
-        flex-basis: clamp(125px, 18.75vw, 300px);
+        width: clamp(180px, 22vw, 260px);
+        height: clamp(180px, 22vw, 260px); 
+        flex: 0 0 auto;
+    }
+    .headshot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px 0 0 8px;
+    }
+    .titles {
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 8px 0;
+    }
+    .titles h1,
+    .titles h2 {
+        margin-left: clamp(12px, 1.5vw, 24px);
     }
     #name {
-        font-size: clamp(29px, 4.375vw, 70px);
+        font-size: clamp(26px, 3.2vw, 48px);
+        white-space: nowrap;
     }
     #welcome {
-        font-size: clamp(17px, 2.5vw, 40px);
+        font-size: clamp(15px, 1.8vw, 26px);
+    }
+    nav {
+        width: auto;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        flex: 0 0 auto;
+        padding: 8px 0;
     }
     nav ul {
-        gap: clamp(12px, 1.875vw, 30px);
-        padding: clamp(16px, 2.5vw, 40px);
-        border-radius: clamp(4px, 0.625vw, 10px);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: fit-content;         
+        min-width: 0;
+        gap: 6px;                  
+        padding: 10px 14px;
+        border-radius: 8px;
+
     }
     .navList {
-        font-size: clamp(12px, 1.875vw, 30px);
+        font-size: 16px;
+    }
+    button {
+        border-radius: 6px;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+    nav button {
+        font-size: 15px;
     }
     nav li {
-        font-size: clamp(10px, 1.5625vw, 25px);
-        margin-left: clamp(4px, 0.625vw, 10px);
+        font-size: 15px;
     }
     .personalLogo {
-        margin-left: clamp(12px, 1.875vw, 30px);
-        margin-right: clamp(12px, 1.875vw, 30px);
-        font-size: clamp(42px, 6.25vw, 100px);
-    }
-}
-@media (min-width: 701px) {
-    :root{
-        --myBlue: #0073BA;
+        align-self: center;
+        margin-left: clamp(8px, 1.2vw, 20px);
+        margin-right: 6px;
+        font-size: clamp(44px, 4.8vw, 72px);
     }
     .gallery {
         flex-direction: row;
@@ -386,115 +541,71 @@ h3 a:hover{
         width: auto;
     }
 }
-@media (min-width: 1601px) {
+@media (min-width: 1024px) {
+    header,
+    .section,
+    #contactInformation {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    article,
+    #Affiliations ul {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #about {
+        margin: 15px 40px;
+        padding: 0 40px;
+    }
     header {
-        gap: 20px;
+        gap: 24px;
+        margin: 15px 50px;
+        padding-right: 30px;
     }
     header > a {
-        flex-basis: 300px;
-    }
-    .headshot {
-        height: 300px;
-        border-radius: 8px 0 0 8px;
+        width: clamp(240px, 22vw, 300px);
+        height: clamp(240px, 22vw, 300px); 
+        max-width: 300px;
+        max-height: 300px;
     }
     .titles h1,
-    .titles h2,
-    nav ul {
+    .titles h2 {
         margin-left: 30px;
     }
     #name {
-        font-size: 70px;
+        font-size: clamp(40px, 4vw, 68px);
     }
     #welcome {
-        font-size: 40px;
-    }
-    nav ul {
-        gap: 30px;
-        padding: 40px;
-        border-radius: 10px;
-    }
-    .navList {
-        font-size: xx-large;
-    }
-    nav li {
-        font-size: 25px;
-        margin-left: 10px;
-    }
-    nav ul {
-        font-size: 40px;
-    }
-    .personalLogo {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 100px;
-    }
-    nav {
-        min-width: auto;
-        margin-right: 125px;
-    }
-    .titles {
-        min-width: auto;
-    }
-}
-@media (max-width: 700px) {
-    header {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 12px;
-        padding: 12px;
-    }
-    header > a {
-        grid-row: 1;
-        justify-self: center;
-        width: min(100%, 220px);
-    }
-    .titles {
-        display: contents;
-    }
-    #name {
-        grid-row: 2;
-        margin: 0;
-        text-align: center;
-        font-size: clamp(28px, 8vw, 40px);
-    }
-    #welcome {
-        grid-row: 3;
-        margin: 0;
-        text-align: center;
-        font-size: clamp(16px, 4vw, 22px);
-    }
-    nav {
-        grid-row: 4;
-        justify-self: stretch;
-        margin: 0;
+        font-size: clamp(22px, 2.2vw, 38px);
     }
     nav ul {
         width: fit-content;
-        margin: 0 auto;
-        gap: 10px;
-        padding: 12px 20px;
+        gap: 12px;
+        padding: 16px 22px;
         border-radius: 10px;
     }
     .navList {
-        font-size: 18px;
+        font-size: clamp(20px, 1.8vw, 28px);
+    }
+    button {
+        border-radius: 10px;
+        padding: 6px 14px;
+    }
+    nav button {
+        font-size: clamp(18px, 1.6vw, 26px);
     }
     nav li {
-        font-size: 16px;
-        margin-left: 0;
-    }
-    .headshot {
-        border-radius: 8px;
+        font-size: clamp(16px, 1.5vw, 24px);
     }
     .personalLogo {
-        grid-row: 5;
-        justify-self: center;
-        margin: 0;
-        font-size: clamp(36px, 10vw, 56px);
+        margin-left: 20px;
+        margin-right: 16px;
+        font-size: clamp(64px, 6vw, 100px);
     }
 }
-.footer{
+.footer {
     font-family: 'Times New Roman', Times, serif;
-    font-size:25px;
+    font-size: 25px;
     text-align: center;
-    font-weight:500;
+    font-weight: 500;
 }

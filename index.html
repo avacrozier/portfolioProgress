@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ava Crozier - MI 349 Week 4 Lab</title>
     <meta name="description" content="This is the skeleton of my portfolio that I've made for my MI 349 Week 4 Lab.">
     <meta name="author" content="Ava Crozier">
     <meta name="year" content="2026">
     <meta name="article1" content="Coffeeshop Concerts">
     <meta name="article2" content="Spartan Music Business Club">
+    <title>Ava Crozier - MI 349 Week 4 Lab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slick-vendor.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <header>
@@ -29,7 +34,7 @@
                 <li><a class="navList" href="#About">About</a></li>
                 <li><a class="navList" href="#Projects">Projects</a></li>
                 <li><a class="navList" href="#Contact">Contact</a></li>
-                <li><a class="navList" href="#" id="darkModeToggle">Dark Mode</a></li>
+                <li><button id="darkModeToggle">Dark Mode</button></li>
             </ul>
         </nav>
         <h1 class="personalLogo">AC</h1>
@@ -37,24 +42,25 @@
     <main>
         <section id="About">
             <h2 class="section">About</h2>
-            <p id="about">Thank you for your interest in my work!<br><br>I’m Ava Crozier, and I’m a Business Management & Information Science double major at Michigan State University. I’m passionate about live music, connecting fan communities, and supporting artists through strong leadership and analytics.</p>
+            <p id="about">Thank you for your interest in my work! <br><br> I’m Ava Crozier, and I’m a Business Management and Information Science double major at Michigan State University. I’m passionate about live music, connecting fan communities, and supporting artists through strong leadership and analytics.</p>
         </section>
-        <section id="Projects">
+        <section id="Projects" class="scrollRevealParts">
             <h2 class="section">Projects</h2>
+            <div class="slickClass">
             <article class="format1">
                 <h3><a href="https://www.instagram.com/coffeeshopconcerts/?hl=en" target="blank">Coffeeshop Concerts</a></h3>
                 <p class="description">In the spring of 2023, I started a concert series hosted in local cafes with goals of providing performance experiences for aspiring musicians, bringing live music into my community, and giving back to youth music programs through fundraising. Over the past three and a half years, we have hosted over 50 concerts and raised over $4,000 for youth music programs including elementary music education and music therapy for students with special needs.</p>
                 <div class="gallery">
                     <figure class="photo-card">
-                        <img class="example1" src="Images/cc-production.jpeg" alt="">
+                        <img class="example1" src="Large-Images/cc-productionL.jpeg" alt="">
                         <p class="caption1">Concert promotion and production</p>
                     </figure>
                     <figure class="photo-card">
-                        <img class="example2" src="Images/cc-fundraising.jpeg" alt="">
+                        <img class="example2" src="Large-Images/cc-fundraisingL.jpeg" alt="">
                         <p class="caption2">Fundraising</p>
                     </figure>
                     <figure class="photo-card">
-                    <img class="example3" src="Images/cc-mentorship.jpeg" alt="">
+                    <img class="example3" src="Large-Images/cc-mentorshipL.jpeg" alt="">
                     <p class="caption3">Mentorship</p>
                     </figure>
                 </div>
@@ -64,15 +70,15 @@
                 <p class="description">In the second semester of my freshman year at MSU, I founded the Spartan Music Business Club. After recruiting an executive board of my peers, surveying interest through Instagram, and establishing the club through MSU’s Involve@State office, we launched in the fall of 2026 as the only music business-focused organization on campus.</p>
                 <div class="gallery">
                     <figure class="photo-card">
-                        <img class="example1" src="Images/smbc-speakers.JPG" alt="">
+                        <img class="example1" src="Large-Images/smbc-speakersL.JPG" alt="">
                     <p class="caption1">Monthly Guest Speaker Series</p>
                     </figure>
                     <figure class="photo-card">
-                        <img class="example2" src="Images/smbc-events.jpeg" alt="">
+                        <img class="example2" src="Large-Images/smbc-eventsL.jpeg" alt="">
                         <p class="caption2">Monthly Live Music and Membership Events</p>
                     </figure>
                     <figure class="photo-card">
-                        <img class="example3" src="Images/smbc-collabs.jpeg" alt="">
+                        <img class="example3" src="Large-Images/smbc-collabsL.jpeg" alt="">
                         <p class="caption3">Professional Collaborations, like running the Campus Street Team for Zach John King’s debut album, I’m What You Get</p>
                     </figure>
                 </div>
@@ -80,8 +86,8 @@
             <article class="format2">
                 <h3><a href="https://www.boguestreetrecords.com/" target="blank">Bogue Street Records</a></h3>
                 <div class="gallery2">
-                    <p class="description">Following its founding in December 2025, I joined Bogue Street Records as a Student Representative and was quickly promoted to the Booking & Live Events Administrator under the A&R team. I oversee event planning and production for our artists, collaborating with our social media and A&R representatives to promote our artists and their music.</p>
-                    <img src="Images/bsr-event.jpg" alt="">                    
+                    <p class="description">Following its founding in December 2025, I joined Bogue Street Records as a Student Representative and was quickly promoted to the Booking & Live Events Administrator under the A&R team. <br><br>I oversee event planning and production for our artists, collaborating with our social media and A&R representatives to promote our artists and their music.</p>
+                    <img src="Large-Images/bsr-eventL.jpg" alt="">                    
                 </div>
             </article>
                 
@@ -89,7 +95,7 @@
                 <h3><a href="https://msuflise.wordpress.com/" target="blank">Future Leaders in Sports and Entertainment</a></h3>
                 <div class="gallery2">
                     <p class="description">I serve as the Event Management Chair for Future Leaders in Sports and Entertainment, an organization within the Broad College of Business. My role involves planning events like stadium tours, sports game outings, and our inaugural Fall Hayride and Spring Trip for 50+ members.</p> 
-                    <img src="Images/flise-logo.png" id="borderexception" alt=""> 
+                    <img src="Large-Images/flise-logoL.png" id="borderexception" alt=""> 
                 </div>
                 
             </article>
@@ -97,7 +103,7 @@
                 <h3>Research</h3>
                 <div class="gallery2">
                     <p class="description">As a professorial assistant at Michigan State University, I work on a research team under the direction of Dr. Allison Eden in the College of Communication Arts and Sciences. Currently, three of our studies will be presented as top papers at the 2026 National Communication Association Convention and in the early stages of publication.<br><br>My presentation at the University Undergraduate Research and Arts Forum (UURAF) on distinguishing enjoyment from appreciation in film gratification was awarded 3rd Place in my division.</p>  
-                    <img src="Images/research-uuraf.JPG" alt="">                  
+                    <img src="Large-Images/research-uurafL.JPG" alt="">                  
                 </div>
                 
             </article>
@@ -106,21 +112,22 @@
                 <p class="description">In June 2026, I received the Bruce E. McDonald Education Abroad Scholarship and attended Cannes Lions as an education abroad experience in International Advertising. During my two weeks à la Côte d'Azur, I traveled to Nice, Monaco, Cannes, and Antibes.</p>
                 <div class="gallery">
                     <figure class="photo-card">
-                        <img class="example1" src="Images/france-culture.jpeg" alt="">
+                        <img class="example1" src="Large-Images/france-cultureL.jpeg" alt="">
                         <p class="caption1">Practiced my French language skills while indulging in the local culture & cuisine</p>
                     </figure>
                     <figure class="photo-card">
-                        <img class="example2" src="Images/france-panels.jpeg" alt="">
+                        <img class="example2" src="Large-Images/france-panelsL.jpeg" alt="">
                         <p class="caption2">Attended panels & company visits</p>
                     </figure>
                     <figure class="photo-card">
-                        <img class="example3" src="Images/france-keynote.jpeg" alt="">
+                        <img class="example3" src="Large-Images/france-keynoteL.jpeg" alt="">
                         <p class="caption3">Listened to keynote speakers like Oprah Winfrey</p>
                     </figure>
                 </div>
             </article>
+            </div>
         </section>
-        <section id="Affiliations">
+        <section id="Affiliations" class="scrollRevealParts">
             <h2 class="section">Affiliations</h2>
             <ul>
                 <li id="a1">MSU Honors College</li>
@@ -129,13 +136,13 @@
                 <li id="a4">GRAMMY U</li>
             </ul>
         </section>
-        <section id="Contact">
+        <section id="Contact" class="scrollRevealParts">
             <h2 class="section">Contact</h2>
             <address>
                 <p id="contactInformation">Ava Crozier<br><a href="mailto:Crozier5@msu.edu">Crozier5@msu.edu</a><br><a href="tel:+19492893281">(949) 289-3281</a><br>East Lansing, MI</p>
             </address>
         </section>
-    </main>
+    </main> 
     <footer>
         <p class="footer">© 2026 Ava Crozier</p>
         <br>
