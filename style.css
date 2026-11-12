@@ -3,6 +3,10 @@
     --myYellow: #FFF7B6;
     --myBlue:#0073BA;
     --myLightBlue:#D5E3E9;
+    --myDarkModeRed: #FFF7B6;
+    --myDarkModeYellow: #00375A;
+    --myDarkModeBlue: #D5E3E9;
+    --myDarkModeLightBlue:#490B00;
     --bodyFont: 'Times New Roman', Times, serif;
     --headerFont: "Fraunces", serif;
 }
@@ -54,6 +58,8 @@ nav ul{
     border-radius: 0.625vw;
     padding: 2.5vw;
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 a:hover{
     color: var(--myRed);

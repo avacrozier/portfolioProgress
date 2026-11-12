@@ -124,3 +124,50 @@ I noticed the images in my format2 cards were cut off when decreasing browser wi
     **Response**: Updated the media queries in style.css: format2 galleries now keep the image stacked below the description until the viewport reaches 1000px, then switch to a side-by-side layout. The existing 4:3 image ratio is unchanged. The stylesheet diff check passes, and your navigation margin change is preserved.
     **Follow-up Prompt:** They should stack as soon as there is not enough space for the proper ratio. Do not let the ratio be modified at all when changing browser width.
     **Follow-up Response:** Replaced format2’s fixed viewport breakpoint with an auto-fitting grid in style.css. The description and image now stack when the card cannot fit two 350px columns; otherwise, they sit side by side. The existing 4:3 image ratio is unchanged and the images are vertically centered beside the description. The stylesheet diff check passes.
+
+**11/11/26**
+
+For the JavaScript lab, I prompted Copilot to add a JavaScript function without affecting the HTML or CSS. 
+    **Prompt:** Without editing my HTML or CSS, help me write a JavaScript function to change these colors:
+        --myRed: #DF2201;
+        --myYellow: #FFF7B6;
+        --myBlue:#0073BA;
+        --myLightBlue:#D5E3E9;
+    to these colors:
+        --myDarkModeRed: #FF6B54;
+        --myDarkModeYellow: #332F18;
+        --myDarkModeBlue: #4DB8FF;
+        --myDarkModeLightBlue:#1B2D36;
+    **Response:** Use JavaScript to override the existing CSS variables at runtime—no HTML or CSS edits needed:
+        function applyDarkModeColors() {  
+            const root = document.documentElement;  root.style.setProperty('--myRed', '#FF6B54');  root.style.setProperty('--myYellow', '#332F18');  root.style.setProperty('--myBlue', '#4DB8FF');  root.style.setProperty('--myLightBlue', '#1B2D36';}    
+        applyDarkModeColors();
+    This works for styles that use var(--myRed), var(--myYellow), and the other original variable names.   
+    **Follow-up Prompt:** How can I call this in the navList in the new li a I added for a dark mode toggle?
+    **Follow-up Response:**  navList is a CSS class, not a function. Your applyDarkModeColors() function is in utilities.js, but that file isn’t currently included in index.html. Also, the call at the bottom of utilities.js applies dark mode as soon as the page loads.
+        For a click-to-toggle, give the link an ID:
+            li><a class="navList" href="#" id="darkModeToggle">Dark Mode</a></li>
+        Then load the script near the end of <body> in index.html:
+            <script src="utilities.js"></script>
+        In utilities.js, remove the automatic applyDarkModeColors(); call and add a toggle handler. You’ll also need a light-mode function to restore the original colors:
+            function applyLightModeColors() {  
+                const root = document.documentElement;  
+                root.style.setProperty('--myRed', '#DF2201');  
+                root.style.setProperty('--myYellow', '#FFF7B6');  
+                root.style.setProperty('--myBlue', '#0073BA');  
+                root.style.setProperty('--myLightBlue', '#D5E3E9');
+                }
+            let isDarkMode = false;
+            document.getElementById('darkModeToggle').addEventListener('click', (event) => {  
+                event.preventDefault();  
+                isDarkMode = !isDarkMode;  
+                if (isDarkMode) {    
+                    applyDarkModeColors();  
+                } else {    
+                    applyLightModeColors();  
+                    }
+                });
+        That way, the page starts in light mode and each click switches between the two themes.
+    **Follow-up Prompt:** The colors don't change when I press the Dark Mode toggle, how can I troubleshoot this?
+    **Follow-up Response:** I found the cause: the click handler calls applyDarkModeColors(), but that function is missing from utilities.js. The click will raise a ReferenceError, so the theme never changes. I’ll add the missing function and make light-mode reset to the stylesheet defaults.
+    **Note:** I decided to change from the dark mode colors to an inverted and more muted palette different from what's listed above
